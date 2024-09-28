@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
+  import 'package:flutter/material.dart';
 
-class page4 extends StatelessWidget {
-  const page4({super.key});
+  class page4 extends StatelessWidget {
+    const page4({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text('page4'));
+    @override
+    Widget build(BuildContext context) {
+      return Center(child: Text('page4'));
+    }
   }
-}

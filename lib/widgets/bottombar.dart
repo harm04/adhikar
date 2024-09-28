@@ -2,7 +2,7 @@ import 'package:adhikar/pages/home.dart';
 import 'package:adhikar/pages/page2.dart';
 import 'package:adhikar/pages/page3.dart';
 import 'package:adhikar/pages/page4.dart';
-import 'package:adhikar/pages/page5.dart';
+import 'package:adhikar/pages/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class _BottomBarState extends State<BottomBar> {
   int _page = 0;
   late PageController pageController;
 
-  List<Widget> pageList = [ const HomeScreen(),const page2(), const page3(), const page4(), const page5()];
+  List<Widget> pageList = [ const HomeScreen(),const page2(), const page3(), const page4(), const ProfileScreen()];
 
   @override
   void initState() {
