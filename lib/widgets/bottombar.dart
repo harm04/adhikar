@@ -44,72 +44,71 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         onPageChanged: onPageChanged,
         children: pageList,
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 20),
-        child: Container(
-          height: 75,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(),
-              color: Colors.black),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: CupertinoTabBar(
-              border: Border.all(color: Colors.black),
-              iconSize: 30,
-              activeColor: Colors.white,
-              backgroundColor: Colors.black,
-              items: <BottomNavigationBarItem>[
-                 BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    const AssetImage('assets/icons/ic_home.png'),
-                    size: 35,
-                    color: (_page == 0) ? Colors.white : Colors.grey,
-                  ),
-                  backgroundColor: Colors.white,
+      bottomNavigationBar: Container(
+      margin: const EdgeInsets.symmetric(horizontal: 30.0,vertical: 20),
+        height: 75,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(),
+            color: Colors.black),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CupertinoTabBar(
+            border: Border.all(color: Colors.black),
+            iconSize: 30,
+            activeColor: Colors.white,
+            backgroundColor: Colors.black,
+            items: <BottomNavigationBarItem>[
+               BottomNavigationBarItem(
+                icon: ImageIcon(
+                  const AssetImage('assets/icons/ic_home.png'),
+                  size: 35,
+                  color: (_page == 0) ? Colors.white : Colors.grey,
                 ),
-                BottomNavigationBarItem(
+                backgroundColor: Colors.white,
+              ),
+              BottomNavigationBarItem(
+                icon: ImageIcon(
+                  const AssetImage('assets/icons/ic_document.png'),
+                  size: 40,
+                  color: (_page == 1) ? Colors.white : Colors.grey,
+                ),
+                backgroundColor: Colors.white,
+              ),
+              BottomNavigationBarItem(
                   icon: ImageIcon(
-                    const AssetImage('assets/icons/ic_document.png'),
+                    const AssetImage('assets/icons/ic_law.png'),
                     size: 40,
-                    color: (_page == 1) ? Colors.white : Colors.grey,
+                    color: (_page == 2) ? Colors.white : Colors.grey,
                   ),
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.white),
+             
+              BottomNavigationBarItem(
+                icon: ImageIcon(
+                  const AssetImage('assets/icons/ic_save.png'),
+                  size: 20,
+                  color: (_page == 3) ? Colors.white : Colors.grey,
                 ),
-                BottomNavigationBarItem(
-                    icon: ImageIcon(
-                      const AssetImage('assets/icons/ic_law.png'),
-                      size: 40,
-                      color: (_page == 2) ? Colors.white : Colors.grey,
-                    ),
-                    backgroundColor: Colors.white),
-               
-                BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    const AssetImage('assets/icons/ic_save.png'),
-                    size: 20,
-                    color: (_page == 3) ? Colors.white : Colors.grey,
-                  ),
-                  backgroundColor: Colors.white,
+                backgroundColor: Colors.white,
+              ),
+              BottomNavigationBarItem(
+                icon: ImageIcon(
+                  const AssetImage('assets/icons/ic_profile.png'),
+                  size: 20,
+                  color: (_page == 4) ? Colors.white : Colors.grey,
                 ),
-                BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    const AssetImage('assets/icons/ic_profile.png'),
-                    size: 20,
-                    color: (_page == 4) ? Colors.white : Colors.grey,
-                  ),
-                  backgroundColor: Colors.white,
-                ),
-              ],
-              onTap: navigationTapped,
-              currentIndex: _page,
-            ),
+                backgroundColor: Colors.white,
+              ),
+            ],
+            onTap: navigationTapped,
+            currentIndex: _page,
           ),
         ),
       ),

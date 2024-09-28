@@ -1,10 +1,8 @@
-import 'dart:ui';
 
 import 'package:adhikar/widgets/customButton.dart';
 import 'package:adhikar/widgets/customTextfield.dart';
 import 'package:dropdownfield2/dropdownfield2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -88,7 +86,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   CircleAvatar(
                     radius: 70,
                     backgroundColor: Colors.black,
-                    child: const CircleAvatar(
+                    child: CircleAvatar(
                       radius: 66,
                       backgroundColor: Colors.white,
                       backgroundImage: NetworkImage(
@@ -193,10 +191,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-            CustomButton(text: 'Finish',)
+              const CustomButton(
+                text: 'Finish',
+              )
             ],
           ),
         ),
