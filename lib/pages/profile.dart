@@ -1,8 +1,9 @@
-
+import 'package:adhikar/utils/colors.dart';
 import 'package:adhikar/widgets/customButton.dart';
 import 'package:adhikar/widgets/customTextfield.dart';
 import 'package:dropdownfield2/dropdownfield2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -69,10 +70,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: primaryColor,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: primaryColor,
+            statusBarIconBrightness: Brightness.light),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           'Profile',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+          style: TextStyle(color: Colors.white),
         ),
       ),
       body: Padding(
@@ -81,6 +86,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 20,
+              ),
               const Stack(
                 children: [
                   CircleAvatar(

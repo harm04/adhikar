@@ -22,7 +22,7 @@ class DrawerItems extends StatelessWidget {
             ),
             Text(
               name,
-              style: TextStyle(
+              style: const TextStyle(
                   color: primaryColor,
                   fontSize: 17,
                   fontWeight: FontWeight.w500),
