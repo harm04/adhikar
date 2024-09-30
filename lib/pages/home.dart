@@ -1,4 +1,6 @@
 import 'package:adhikar/pages/emergency.dart';
+import 'package:adhikar/pages/filters.dart';
+import 'package:adhikar/pages/forms.dart';
 import 'package:adhikar/utils/colors.dart';
 import 'package:adhikar/widgets/drawerItems.dart';
 import 'package:adhikar/widgets/judgementCrad.dart';
@@ -84,7 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return const FiltersScreen();
+                              }));
+                            },
                             child: const DrawerItems(
                                 image: 'assets/icons/ic_filter.png',
                                 name: 'Filter'),
@@ -102,7 +109,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 name: 'Contact us'),
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                                Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return const FormsScreen();
+                              }));
+                            },
                             child: const DrawerItems(
                                 image: 'assets/icons/ic_forms.png',
                                 name: 'Forms'),
